@@ -5,7 +5,7 @@
  * For full license information, please view the LICENSE file that was distributed with this source code.
  */
 
-namespace SprykerEcoTest\Glue\UnzerRestApi;
+namespace SprykerEcoTest\Zed\UnzerRestApi;
 
 use Codeception\Actor;
 
@@ -25,9 +25,9 @@ use Codeception\Actor;
  *
  * @SuppressWarnings(PHPMD)
  */
-class UnzerRestApiGlueTester extends Actor
+class UnzerRestApiBusinessTester extends Actor
 {
-    use _generated\UnzerRestApiGlueTesterActions;
+    use _generated\UnzerRestApiBusinessTesterActions;
 
     /**
      * Define custom actions here

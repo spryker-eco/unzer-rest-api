@@ -29,7 +29,6 @@ class UnzerRestApiDependencyProvider extends AbstractBundleDependencyProvider
     public function provideDependencies(Container $container): Container
     {
         $container = parent::provideDependencies($container);
-
         $container = $this->addUnzerClient($container);
 
         return $container;

@@ -2,18 +2,16 @@ namespace: UnzerRestApi
 
 include:
     - tests/SprykerEcoTest/Glue/UnzerRestApi
-
-actor: Tester
+    - tests/SprykerEcoTest/Zed/UnzerRestApi
 
 paths:
     tests: tests
-    support: .
+    support: tests/_support
     log: tests/_output
     data: tests/_data
     envs: tests/_envs
 
 settings:
-    bootstrap: _bootstrap.php
     suite_class: \PHPUnit_Framework_TestSuite
     colors: true
     memory_limit: 1024M
@@ -21,6 +19,8 @@ settings:
 
 coverage:
     enabled: true
-    whitelist: { include: ['src/*'] }
+    whitelist:
+        include:
+            - 'src/*'
 
 bootstrap: bootstrap.php

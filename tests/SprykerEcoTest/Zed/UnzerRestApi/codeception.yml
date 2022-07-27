@@ -1,0 +1,64 @@
+namespace: SprykerEcoTest\Zed\UnzerRestApi
+paths:
+    tests: .
+    data: ../../../_data
+    support: _support
+    log: ../../../_output
+
+coverage:
+    enabled: true
+    remote: false
+    whitelist:
+        include:
+            - '../../../../src/*'
+suites:
+    Business:
+        path: Business
+        class_name: UnzerRestApiBusinessTester
+        modules:
+            enabled:
+                - Asserts
+                - \SprykerTest\Zed\Testify\Helper\Business\BusinessHelper
+                - \SprykerTest\Shared\Testify\Helper\Environment:
+                      isolated: true
+                - \SprykerTest\Shared\Testify\Helper\ConfigHelper
+                - \SprykerTest\Shared\Transfer\Helper\TransferGenerateHelper:
+                      isolated: true
+                      schemaDirectories:
+                          - src/*/Shared/*/Transfer/
+                          - vendor/spryker/*/src/Spryker/Shared/*/Transfer/
+                - \SprykerTest\Shared\Testify\Helper\LocatorHelper:
+                      projectNamespaces:
+                          - 'Spryker'
+                          - 'SprykerTest'
+                          - 'SprykerEco'
+                          - 'SprykerEcoTest'
+                - \SprykerTest\Shared\Testify\Helper\DependencyHelper
+                - \SprykerTest\Shared\Propel\Helper\TransactionHelper
+                - \SprykerTest\Shared\Quote\Helper\PersistentQuoteHelper
+                - \SprykerTest\Shared\Testify\Helper\DataCleanupHelper
+    Communication:
+        path: Communication
+        class_name: UnzerRestApiCommunicationTester
+        modules:
+            enabled:
+                - Asserts
+                - \SprykerTest\Zed\Testify\Helper\Business\BusinessHelper
+                - \SprykerTest\Shared\Testify\Helper\Environment:
+                      isolated: true
+                - \SprykerTest\Shared\Testify\Helper\ConfigHelper
+                - \SprykerTest\Shared\Transfer\Helper\TransferGenerateHelper:
+                      isolated: true
+                      schemaDirectories:
+                          - src/*/Shared/*/Transfer/
+                          - vendor/spryker/*/src/Spryker/Shared/*/Transfer/
+                - \SprykerTest\Shared\Testify\Helper\LocatorHelper:
+                      projectNamespaces:
+                          - 'Spryker'
+                          - 'SprykerTest'
+                          - 'SprykerEco'
+                          - 'SprykerEcoTest'
+                - \SprykerTest\Shared\Testify\Helper\DependencyHelper
+                - \SprykerTest\Shared\Propel\Helper\TransactionHelper
+                - \SprykerTest\Shared\Quote\Helper\PersistentQuoteHelper
+                - \SprykerTest\Shared\Testify\Helper\DataCleanupHelper

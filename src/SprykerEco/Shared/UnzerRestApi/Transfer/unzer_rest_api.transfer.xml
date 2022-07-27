@@ -28,4 +28,49 @@
         <property name="attributes" type="string"/>
         <property name="action" type="string"/>
     </transfer>
+
+    <transfer name="RestCheckoutData">
+        <property name="quote" type="Quote"/>
+    </transfer>
+
+    <transfer name="Quote">
+        <property name="unzerCredentials" type="UnzerCredentials"/>
+    </transfer>
+
+    <transfer name="UnzerCredentials">
+        <property name="unzerKeypair" type="UnzerKeypair"/>
+    </transfer>
+
+    <transfer name="UnzerKeypair">
+        <property name="publicKey" type="string"/>
+    </transfer>
+
+    <transfer name="RestCheckoutDataResponseAttributes">
+        <property name="unzerPublicKey" type="string"/>
+    </transfer>
+
+    <transfer name="CheckoutResponse">
+    </transfer>
+
+    <transfer name="CheckoutData">
+    </transfer>
+
+    <transfer name="RestCheckoutRequestAttributes">
+    </transfer>
+
+    <transfer name="RestPayment">
+        <property name="unzerMarketplaceBankTransfer" type="RestUnzerPayment"/>
+        <property name="unzerMarketplaceSofort" type="RestUnzerPayment"/>
+        <property name="unzerBankTransfer" type="RestUnzerPayment"/>
+        <property name="unzerSofort" type="RestUnzerPayment"/>
+        <property name="unzerMarketplaceCreditCard" type="RestUnzerPayment"/>
+        <property name="unzerCreditCard" type="RestUnzerPayment"/>
+    </transfer>
+
+    <transfer name="RestUnzerPayment">
+        <property name="paymentResource" type="UnzerPaymentResource"/>
+    </transfer>
+
+    <transfer name="UnzerPaymentResource">
+    </transfer>
 </transfers>
